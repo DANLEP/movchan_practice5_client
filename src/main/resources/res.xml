@@ -1,19 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<S:Envelope xmlns:S="http://www.w3.org/2003/05/soap-envelope">
+<S:Envelope xmlns:S="http://schemas.xmlsoap.org/soap/envelope/">
     <S:Body>
-        <S:Fault xmlns:ns4="http://schemas.xmlsoap.org/soap/envelope/">
-            <S:Code>
-                <S:Value>S:Receiver</S:Value>
-            </S:Code>
-            <S:Reason>
-                <S:Text xml:lang="en">Type length can not be blank or empty</S:Text>
-            </S:Reason>
-            <S:Detail>
-                <ns2:ValidationFault xmlns:ns2="http://location.nure.ua/server/service"
-                                     xmlns:ns3="http://location.nure.ua/entity">
-                    <message>Type length can not be blank or empty</message>
-                </ns2:ValidationFault>
-            </S:Detail>
+        <S:Fault xmlns:ns4="http://www.w3.org/2003/05/soap-envelope">
+            <faultcode>S:Client</faultcode>
+            <faultstring>Client token not found</faultstring>
         </S:Fault>
     </S:Body>
 </S:Envelope>

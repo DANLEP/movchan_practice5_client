@@ -3,10 +3,8 @@ package ua.nure.location.entity;
 
 import java.util.ArrayList;
 import java.util.List;
-import jakarta.xml.bind.annotation.XmlAccessType;
-import jakarta.xml.bind.annotation.XmlAccessorType;
-import jakarta.xml.bind.annotation.XmlElement;
-import jakarta.xml.bind.annotation.XmlType;
+
+import jakarta.xml.bind.annotation.*;
 
 
 /**
@@ -56,6 +54,7 @@ import jakarta.xml.bind.annotation.XmlType;
     "area",
     "places"
 })
+@XmlRootElement(name = "location")
 public class Location
     extends Entity
 {
@@ -223,6 +222,7 @@ public class Location
     @XmlType(name = "", propOrder = {
         "place"
     })
+    @XmlRootElement(name = "places")
     public static class Places {
 
         @XmlElement(required = true)
