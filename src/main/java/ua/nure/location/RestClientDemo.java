@@ -107,9 +107,9 @@ public class RestClientDemo {
             System.out.println("Read places");
             printPlaces(places);
 
-            // Update dish information
+            // Update place information
             Place updatedPlace = retrievePlacesById(client, 1);
-            // Set updated dish properties
+            // Set updated place properties
             int lastId = places.size();
             updatedPlace.setId(lastId);
             updatePlaceInfoById(client, updatedPlace);

@@ -5,6 +5,10 @@ import jakarta.xml.bind.annotation.XmlEnum;
 import jakarta.xml.bind.annotation.XmlEnumValue;
 import jakarta.xml.bind.annotation.XmlType;
 
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
+
 
 /**
  * <p>Java class for SeasonalityType.
@@ -48,6 +52,16 @@ public enum SeasonalityType {
             }
         }
         throw new IllegalArgumentException(v);
+    }
+
+    public String getValue() {
+        return value;
+    }
+
+    public static List<String> getStringValues() {
+        return Arrays.stream(SeasonalityType.values())
+                .map(SeasonalityType::getValue)
+                .collect(Collectors.toList());
     }
 
 }
